@@ -2,13 +2,21 @@
 
 ### MVP Ideas
 
-GET /pizzaOrders
+`GET /pizzaOrders`
+
 Get all pizza orders
 
-POST /pizzaOrders/{orderId}
-{ orderId: string, toppings: string[] }
+`POST /pizzaOrders/{orderId}`
+
+{ orderId: string, toppings?: string[] }
+
 
 ### Future requirements
 
-POST /pizzaOrders/{pizzaType}
+`POST /pizzaOrders/{pizzaType}`
+
 pizzaType: 'Margherita' | 'Buffalo' | 'Desanzano' | 'Calzone'
+
+`POST /pizzaOrders/{pizzaShopId}/{pizzaType}`
+
+pizzaShopId: string
