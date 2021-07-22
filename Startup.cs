@@ -13,6 +13,16 @@ using Microsoft.Extensions.Logging;
 
 namespace PizzaShop
 {
+    public interface IPizzaRepo 
+    {
+
+    }
+
+    public class PizzaRepo : IPizzaRepo 
+    {
+
+    }
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -26,6 +36,12 @@ namespace PizzaShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IPizzaRepo,PizzaRepo>(); // Instead of passing concrete params, specify types that are passed in. 
+
+            // services.AddScoped()
+            // services.AddSingleton()
+
+            // what is the difference between these three? H/W task
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

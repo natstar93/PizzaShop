@@ -13,9 +13,10 @@ namespace PizzaShop.Controllers
     {
         private readonly ILogger<PizzaOrderController> _logger;
 
-        public PizzaOrderController(ILogger<PizzaOrderController> logger)
+        public PizzaOrderController(ILogger<PizzaOrderController> logger, IPizzaRepo pizzaRepo) // needs an instance of pizzarepo
         {
             _logger = logger;
+            _pizzaRepo = pizzaRepo;
         }
 
         [HttpGet] // [HttpGet("pizzaorders")] doesn't work btw
