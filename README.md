@@ -4,19 +4,17 @@
 
 `GET /pizzaOrders`
 
-Get all pizza orders
-
-`POST /pizzaOrders/{orderId}`
-
-{ orderId: string, toppings?: string[] }
-
 
 ### Future requirements
 
-`POST /pizzaOrders/{pizzaType}`
 
-pizzaType: 'Margherita' | 'Buffalo' | 'Desanzano' | 'Calzone'
+`POST /pizzaOrders`
 
-`POST /pizzaOrders/{pizzaShopId}/{pizzaType}`
+{ pizzaType: 'Margherita' | 'Buffalo' | 'Desanzano' | 'Calzone' }
 
-pizzaShopId: string
+
+`POST /pizzaOrders`
+
+{ pizzaType: 'Margherita' | 'Buffalo' | 'Desanzano' | 'Calzone', pizzaShopId: string }
+
+
